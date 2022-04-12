@@ -49,7 +49,7 @@ class App extends Tasks {
                             placeholder="Add New task"
                         />
                         <Button
-                            style={{ height: "40px" }}
+                            style={{ height: "40px", padding:"5px" }}
                             color="primary"
                             variant="outlined"
                             type="submit"
