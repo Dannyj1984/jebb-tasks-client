@@ -16,6 +16,10 @@
     align-items: center;
 }
 
+.MuiButton-outlinedPrimary {
+    height: 40px;
+}
+
 .container {
     width: 500px;
     min-height: 300px;

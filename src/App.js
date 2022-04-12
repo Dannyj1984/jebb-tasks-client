@@ -26,7 +26,7 @@ class App extends Tasks {
         ].join('-');
         }
 
-        var firstday = new Date(curr).toString().substring(0,15)
+        var firstday = new Date(curr).toString().substring(0,11)
 
 
         const { tasks } = this.state;
@@ -49,12 +49,12 @@ class App extends Tasks {
                             placeholder="Add New task"
                         />
                         <Button
-                            style={{ height: "40px", padding:"5px" }}
+                            className="addButton"
                             color="primary"
                             variant="outlined"
                             type="submit"
                         >
-                            Add task
+                            Add
                         </Button>
                     </form>
                     <div>
