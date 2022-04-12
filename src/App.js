@@ -7,11 +7,33 @@ import "./App.css";
 class App extends Tasks {
     state = { tasks: [], currentTask: "" };
     render() {
+
+        var curr = new Date(); // get current date
+        curr.setHours(0, 0, 0, 0);
+        var first = curr.getDate() - curr.getDay() + 1; // First day is the day of the month - the day of the week
+        curr.setHours(0, 0, 0, 0);
+
+        // ✅ Format a date to YYYY-MM-DD (or any other format)
+        function padTo2Digits(num) {
+        return num.toString().padStart(2, '0');
+        }
+
+        function formatDate(date) {
+        return [
+            date.getFullYear(),
+            padTo2Digits(date.getMonth() + 1),
+            padTo2Digits(date.getDate()),
+        ].join('-');
+        }
+
+        var firstday = new Date(curr).toString().substring(0,15)
+
+
         const { tasks } = this.state;
         return (
             <div className="App flex">
                 <Paper elevation={24} className="container">
-                    <div className="heading">Emily's Daily tasks</div>
+                    <div className="heading">{`Jebb's weekly tasks for w/c ${firstday}`}</div>
                     <form
                         onSubmit={this.handleSubmit}
                         className="flex"
